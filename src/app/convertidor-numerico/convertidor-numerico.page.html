@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ConvertidorNumerico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Introduce un número del 1 al 1000</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Número</ion-label>
+        <ion-input [(ngModel)]="numero" type="number" placeholder="Introduce un número"></ion-input>
+      </ion-item>
+      <ion-button expand="full" (click)="onTraducir()">Traducir</ion-button>
+      <ion-text *ngIf="resultado">
+        <p>Resultado: {{ resultado }}</p>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

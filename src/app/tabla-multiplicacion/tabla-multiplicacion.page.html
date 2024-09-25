@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>TablaMultiplicacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Número</ion-label>
+    <ion-input [(ngModel)]="numero" type="number"></ion-input>
+  </ion-item>
+  <ion-card *ngFor="let i of tabla">
+    <ion-card-content>
+      <ion-card-title>{{numero}} x {{i}} = {{numero * i}}</ion-card-title>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
